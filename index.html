@@ -3,16 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Landing Page Ivan</title>
+    <title>Portfolio WWE Skins PRO</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR MEJORADO -->
     <header class="navbar">
-        <div class="logo">NOMBRE</div>
-        <nav>
+        <div class="logo">NICKNAMED</div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
             <a href="#inicio">Inicio</a>
             <a href="#about">Sobre mí</a>
             <a href="#skins">Skins</a>
@@ -21,45 +26,65 @@
 
     <!-- HERO -->
     <section id="inicio" class="hero">
-        <img src="imagen.jpg" class="hero-img">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video-fondo.mp4" type="video/mp4">
+        </video>
         <div class="hero-text">
-            <h1>Nombre del creador</h1>
+            <h1>NICKNAMED</h1>
             <p>Creador de skins WWE 2K</p>
+            <a href="#skins" class="btn">Ver creaciones</a>
         </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="about" class="about hidden">
-        <h2>Sobre mí</h2>
-        <p>
-            Aquí puedes poner una descripción sobre el creador, su experiencia,
-            estilo de skins, etc.
-        </p>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="about-container hidden">
+            <img src="imagen.jpg" alt="Sobre mí">
+            <div>
+                <h2>Sobre mí</h2>
+                <p>
+                    Especialista en skins realistas para WWE 2K. Trabajo en texturas,
+                    fidelidad y detalle de cada luchador, optimizando para juegos y portfolios.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <!-- SKINS -->
+    <!-- STATS -->
+    <section class="stats">
+        <div>
+            <h2>+50</h2>
+            <p>Skins creadas</p>
+        </div>
+        <div>
+            <h2>+10K</h2>
+            <p>Descargas</p>
+        </div>
+    </section>
+
+    <!-- SKINS CON FILTRO -->
     <section id="skins" class="skins">
         <h2 class="hidden">Mis creaciones</h2>
 
-        <div class="grid">
-            <div class="card hidden">
-                <img src="imagen.jpg">
-                <h3>Luchador 1</h3>
-            </div>
+        <div class="filters">
+            <button data-filter="all" class="active">Todos</button>
+            <button data-filter="aj">AJ Styles</button>
+            <button data-filter="roman">Roman Reigns</button>
+            <button data-filter="john">John Cena</button>
+        </div>
 
-            <div class="card hidden">
-                <img src="imagen.jpg">
-                <h3>Luchador 2</h3>
-            </div>
-
-            <div class="card hidden">
-                <img src="imagen.jpg">
-                <h3>Luchador 3</h3>
-            </div>
-
-            <!-- DUPLICA MÁS CARDS -->
+        <div class="grid" id="grid">
+            <!-- Cards dinámicas -->
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Nombre del creador</p>
+        <div class="socials">
+            <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

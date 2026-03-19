@@ -1,3 +1,4 @@
+/* Reset y base */
 * {
     margin: 0;
     padding: 0;
@@ -6,41 +7,108 @@
 }
 
 body {
-    background-color: #0d0d0d;
+    background: #0d0d0d;
     color: white;
+    scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* NAVBAR MEJORADO */
 .navbar {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 40px;
     z-index: 1000;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+    transition: all 0.4s ease;
 }
 
-.navbar .logo {
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.logo {
     color: red;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
+    text-shadow: 0 0 5px red;
+}
+
+.navbar nav {
+    display: flex;
 }
 
 .navbar nav a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
+    position: relative;
     transition: 0.3s;
 }
 
-.navbar nav a:hover {
-    color: red;
+.navbar nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: red;
+    transition: width 0.3s ease-in-out;
 }
 
-/* HERO */
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+/* MENU HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    display: block;
+    transition: 0.4s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navbar nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    width: 200px;
+    padding: 20px 0;
+}
+
+/* HERO full screen con ring como background */
 .hero {
     height: 100vh;
     display: flex;
@@ -48,25 +116,37 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    perspective: 1000px;
+
+    background: url('FondoRing.jpg') center bottom / cover no-repeat;
 }
 
-.hero-img {
+.hero-video {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 120%;
+    height: 100%;
     object-fit: cover;
+    z-index: 0;
     opacity: 0.4;
-    transform: translateY(0);
-    transition: transform 0.2s linear;
 }
+
+.hero-ring {
+    display: none;
+}
+
+/* ya no necesitamos img */
 
 .hero-text {
     text-align: center;
     z-index: 2;
+    transition: transform 0.2s;
 }
 
 .hero-text h1 {
     font-size: 50px;
+    color: white;
 }
 
 .hero-text p {
@@ -74,14 +154,50 @@ body {
     margin-top: 10px;
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: red;
+}
+
 /* ABOUT */
 .about {
     padding: 100px 20px;
+}
+
+.about-container {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+    align-items: center;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
     text-align: center;
 }
 
-.about h2 {
-    margin-bottom: 20px;
+.stats h2 {
     color: red;
 }
 
@@ -90,10 +206,26 @@ body {
     padding: 100px 40px;
 }
 
-.skins h2 {
+.filters {
     text-align: center;
-    margin-bottom: 50px;
-    color: red;
+    margin-bottom: 30px;
+}
+
+.filters button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #111;
+    color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button.active,
+.filters button:hover {
+    background: red;
+    color: white;
 }
 
 /* GRID */
@@ -103,32 +235,124 @@ body {
     gap: 30px;
 }
 
-/* CARD */
+/* CARD 3D */
 .card {
-    background: #1a1a1a;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-inner {
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg) scale(1.05);
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-weight: bold;
+}
+
+.card-img img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
-.card img {
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* DESTELLOS WWE */
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
     width: 100%;
-    display: block;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 0, 0, 0.2) 50%, rgba(255, 255, 255, 0.3) 100%);
+    top: -100%;
+    left: -100%;
+    transform: rotate(25deg);
+    transition: all 0.8s ease-in-out;
 }
 
-.card h3 {
-    padding: 15px;
+.card:hover::before {
+    top: -50%;
+    left: 150%;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.card:hover::after {
+    top: 150%;
+    left: -50%;
 }
 
-/* ANIMACIONES SCROLL */
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    color: #777;
+}
+
+.footer .socials a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.footer .socials a:hover {
+    color: red;
+}
+
+/* ANIMACIONES */
 .hidden {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.6s ease;
+    transition: 0.6s;
 }
 
 .show {
@@ -136,15 +360,49 @@ body {
     transform: translateY(0);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
+.fadeUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+.fadeUp.delay {
+    animation-delay: 0.3s;
+}
+
+.fadeUp.delay2 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 600px) {
+/* RESPONSIVE */
+@media (max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width:600px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
     }
 }
