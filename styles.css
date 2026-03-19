@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: red;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    opacity: 0.4;
+    transform: translateY(0);
+    transition: transform 0.2s linear;
+}
+
+.hero-text {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+}
+
+.hero-text p {
+    color: red;
+    margin-top: 10px;
+}
+
+/* ABOUT */
+.about {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: red;
+}
+
+/* SKINS */
+.skins {
+    padding: 100px 40px;
+}
+
+.skins h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: red;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card h3 {
+    padding: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* ANIMACIONES SCROLL */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WWE</title>
+    <title>Landing Page Ivan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">NOMBRE</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#about">Sobre mí</a>
+            <a href="#skins">Skins</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <img src="imagen.jpg" class="hero-img">
+        <div class="hero-text">
+            <h1>Nombre del creador</h1>
+            <p>Creador de skins WWE 2K</p>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="about" class="about hidden">
+        <h2>Sobre mí</h2>
+        <p>
+            Aquí puedes poner una descripción sobre el creador, su experiencia,
+            estilo de skins, etc.
+        </p>
+    </section>
+
+    <!-- SKINS -->
+    <section id="skins" class="skins">
+        <h2 class="hidden">Mis creaciones</h2>
+
+        <div class="grid">
+            <div class="card hidden">
+                <img src="imagen.jpg">
+                <h3>Luchador 1</h3>
+            </div>
+
+            <div class="card hidden">
+                <img src="imagen.jpg">
+                <h3>Luchador 2</h3>
+            </div>
+
+            <div class="card hidden">
+                <img src="imagen.jpg">
+                <h3>Luchador 3</h3>
+            </div>
+
+            <!-- DUPLICA MÁS CARDS -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
