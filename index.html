@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio WWE Skins PRO</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- ============================================
+         NAVBAR / BARRA DE NAVEGACION
+         - Logo a la izquierda
+         - Menu hamburguesa para movil
+         - Links de navegacion a la derecha
+         ============================================ -->
+    <header class="navbar">
+        <div class="logo">NICKNAMED</div>
+        
+        <!-- Menu hamburguesa (solo visible en movil) -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <!-- Links de navegacion -->
+        <nav id="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#about">Sobre mí</a>
+            <a href="#skins">Skins</a>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         HERO / SECCION PRINCIPAL
+         - Video de fondo con efecto parallax
+         - Titulo principal y subtitulo
+         - Boton CTA (Call to Action)
+         ============================================ -->
+    <section id="inicio" class="hero">
+        <!-- Video de fondo -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video-fondo.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Contenido centrado -->
+        <div class="hero-text">
+            <h1>NICKNAMED</h1>
+            <p>Creador de skins WWE 2K</p>
+            <a href="#skins" class="btn">Ver creaciones</a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT / SECCION SOBRE MI
+         - Imagen a la izquierda
+         - Texto descriptivo a la derecha
+         ============================================ -->
+    <section id="about" class="about">
+        <div class="about-container hidden">
+            <!-- Imagen del creador -->
+            <img src="RomanReigns.png" alt="Sobre mí">
+            
+            <!-- Texto descriptivo -->
+            <div>
+                <h2>Sobre mí</h2>
+                <p>
+                    Especialista en skins realistas para WWE 2K. Trabajo en texturas,
+                    fidelidad y detalle de cada luchador, optimizando para juegos y portfolios.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STATS / ESTADISTICAS
+         - Numeros destacados con descripcion
+         ============================================ -->
+    <section class="stats">
+        <div>
+            <h2>+50</h2>
+            <p>Skins creadas</p>
+        </div>
+        <div>
+            <h2>+10K</h2>
+            <p>Descargas</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKINS / GALERIA DE CREACIONES
+         - Titulo de seccion
+         - Buscador
+         - Grupos de luchadores con sus skins
+         ============================================ -->
+    <section id="skins" class="skins">
+        <h2 class="hidden">Mis creaciones</h2>
+
+        <!-- Buscador -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    class="search-input" 
+                    placeholder="Buscar luchador o skin..."
+                    autocomplete="off"
+                >
+                <button class="search-clear" id="search-clear" type="button">&times;</button>
+            </div>
+            <!-- Mensaje cuando no hay resultados -->
+            <p class="search-no-results" id="search-no-results">No se encontraron resultados</p>
+        </div>
+
+        <!-- Contenedor de grupos de luchadores (se genera con JS) -->
+        <div class="wrestlers-container" id="wrestlers-container"></div>
+    </section>
+
+    <!-- ============================================
+         MODAL / VENTANA EMERGENTE PARA VER IMAGEN
+         - Overlay oscuro de fondo
+         - Imagen ampliada
+         - Boton X para cerrar
+         - Nombre del luchador
+         ============================================ -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <!-- Boton cerrar (X) -->
+            <button class="modal-close" id="modal-close">&times;</button>
+            
+            <!-- Imagen ampliada -->
+            <img src="" alt="Vista completa" id="modal-image">
+            
+            <!-- Nombre del luchador -->
+            <p class="modal-name" id="modal-name"></p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER / PIE DE PAGINA
+         - Copyright
+         - Links a redes sociales
+         ============================================ -->
+    <footer class="footer">
+        <p>© 2026 Nombre del creador</p>
+        <div class="socials">
+            <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+
+</html>
