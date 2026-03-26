@@ -17,7 +17,12 @@
          - Links de navegacion a la derecha
          ============================================ -->
     <header class="navbar">
-        <div class="logo">NICKNAMED</div>
+        <div class="logo-container">
+            <div class="logo">NICKNAMED</div>
+            <div class="logo-image">
+                <img src="Logo_upscaled_2x.png" alt="Logo">
+            </div>
+        </div>
         
         <!-- Menu hamburguesa (solo visible en movil) -->
         <div class="menu-toggle" id="menu-toggle">
@@ -62,7 +67,7 @@
     <section id="about" class="about">
         <div class="about-container hidden">
             <!-- Imagen del creador -->
-            <img src="RomanReigns.png" alt="Sobre mí">
+            <img src="Logo_upscaled_2x.png" alt="Sobre mí">
             
             <!-- Texto descriptivo -->
             <div>
@@ -129,6 +134,7 @@
          - Imagen ampliada
          - Boton X para cerrar
          - Nombre del luchador
+         - Hashtags y creador
          ============================================ -->
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-content">
@@ -140,6 +146,16 @@
             
             <!-- Nombre del luchador -->
             <p class="modal-name" id="modal-name"></p>
+            
+            <!-- Hashtags -->
+            <div class="modal-hashtags" id="modal-hashtags">
+                <span class="hashtag" id="hashtag-1">#WWE2K</span>
+                <span class="hashtag" id="hashtag-2">#CustomSkin</span>
+                <span class="hashtag" id="hashtag-3">#Gaming</span>
+            </div>
+            
+            <!-- Creador -->
+            <p class="modal-creator" id="modal-creator">Created by: Nicknamed</p>
         </div>
     </div>
 

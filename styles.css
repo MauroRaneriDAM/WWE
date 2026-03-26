@@ -44,12 +44,39 @@ body {
     border-bottom: 1px solid rgba(255, 0, 0, 0.6);
 }
 
+/* Contenedor del logo (imagen + texto) */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Contenedor de la imagen del logo */
+.logo-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    box-shadow: 0 0 10px red;
+}
+
+.logo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Logo con efecto glow */
 .logo {
     color: red;
     font-weight: bold;
     font-size: 24px;
-    text-shadow: 0 0 5px red;
+    text-shadow: 0 0 10px red;
 }
 
 /* Links de navegacion */
@@ -214,6 +241,8 @@ body {
 .about img {
     width: 300px;
     border-radius: 10px;
+    border: 1px solid #e62020;
+    box-shadow: 0 0 10px red;
 }
 
 /* ============================================
@@ -561,7 +590,7 @@ body {
 /* Imagen del modal */
 .modal-content img {
     max-width: 100%;
-    max-height: 80vh;
+    max-height: 70vh;
     border-radius: 12px;
     border: 3px solid #e62020;
     box-shadow: 0 0 40px rgba(255, 0, 0, 0.4),
@@ -603,6 +632,55 @@ body {
     letter-spacing: 2px;
     margin-top: 20px;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* ============================================
+   MODAL - HASHTAGS
+   - 3 hashtags en fila horizontal y simetrica
+   ============================================ */
+.modal-hashtags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.modal-hashtags .hashtag {
+    background: rgba(230, 32, 32, 0.2);
+    border: 1px solid rgba(230, 32, 32, 0.5);
+    color: #ff6666;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.modal-hashtags .hashtag:hover {
+    background: rgba(230, 32, 32, 0.4);
+    border-color: #e62020;
+    color: white;
+}
+
+/* ============================================
+   MODAL - CREADOR
+   - Texto "Created by:" debajo de los hashtags
+   ============================================ */
+.modal-creator {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+.modal-creator span {
+    color: #e62020;
+    font-weight: 700;
 }
 
 /* ============================================
@@ -719,6 +797,15 @@ body {
     .wrestler-name {
         font-size: 18px;
     }
+    
+    .modal-hashtags {
+        gap: 10px;
+    }
+    
+    .modal-hashtags .hashtag {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
 }
 
 /* ============================================
@@ -782,5 +869,28 @@ body {
     .modal-close {
         top: 10px;
         right: 10px;
+    }
+    
+    .logo-image {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    .modal-hashtags {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .modal-hashtags .hashtag {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+    
+    .modal-creator {
+        font-size: 12px;
     }
 }

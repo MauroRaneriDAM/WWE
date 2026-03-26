@@ -73,79 +73,105 @@ hero.addEventListener('mouseleave', () => {
 // - wrestler: Nombre del luchador (para agrupar)
 // - img: Imagen principal
 // - imgBack: Imagen que se muestra en el modal
+// - tags: Array de 3 hashtags
+// - creator: Nombre del creador
 // ============================================
 const skins = [
     { 
         name: "Roman Reigns WrestleMania 42", 
         wrestler: "Roman Reigns",
         img: "RomanReigns.png",
-        imgBack: "RomanReigns.png"
+        imgBack: "RomanReigns.png",
+        tags: ["#WWE2K24", "#RomanReigns", "#WrestleMania"],
+        creator: "Nicknamed"
     },
     { 
         name: "Roman Reigns Tribal Chief", 
         wrestler: "Roman Reigns",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#TribalChief", "#Bloodline", "#WWE"],
+        creator: "Nicknamed"
     },
     { 
         name: "Roman Reigns Shield", 
         wrestler: "Roman Reigns",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#TheShield", "#Classic", "#Attire"],
+        creator: "Nicknamed"
     },
     { 
         name: "Jey Uso Feb. '26 Better Hair", 
         wrestler: "Jey Uso",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#JeyUso", "#MainEvent", "#Usos"],
+        creator: "Nicknamed"
     },
     { 
         name: "Jey Uso Promo", 
         wrestler: "Jey Uso",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#JeyUso", "#Promo", "#WWE2K"],
+        creator: "Nicknamed"
     },
     { 
         name: "Jey Uso Main Event", 
         wrestler: "Jey Uso",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#MainEvent", "#YeetCity", "#Uso"],
+        creator: "Nicknamed"
     },
     { 
         name: "AJ Styles Phenomenal", 
         wrestler: "AJ Styles",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#AJStyles", "#Phenomenal", "#P1"],
+        creator: "Nicknamed"
     },
     { 
         name: "AJ Styles TNA", 
         wrestler: "AJ Styles",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#TNA", "#Classic", "#AJStyles"],
+        creator: "Nicknamed"
     },
     { 
         name: "John Cena Ruthless", 
         wrestler: "John Cena",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#JohnCena", "#Ruthless", "#NeverGiveUp"],
+        creator: "Nicknamed"
     },
     { 
         name: "John Cena WrestleMania", 
         wrestler: "John Cena",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#WrestleMania", "#Cena", "#Legend"],
+        creator: "Nicknamed"
     },
     { 
         name: "Brock Lesnar 2013", 
         wrestler: "Brock Lesnar",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#BrockLesnar", "#Beast", "#2013"],
+        creator: "Nicknamed"
     },
     { 
         name: "Brock Lesnar Beast Mode", 
         wrestler: "Brock Lesnar",
         img: "imagen.jpg", 
-        imgBack: "imagen.jpg"
+        imgBack: "imagen.jpg",
+        tags: ["#BeastMode", "#Suplex", "#Lesnar"],
+        creator: "Nicknamed"
     },
 ];
 
@@ -157,6 +183,8 @@ const modalOverlay = document.getElementById('modal-overlay');
 const modalImage = document.getElementById('modal-image');
 const modalName = document.getElementById('modal-name');
 const modalClose = document.getElementById('modal-close');
+const modalHashtags = document.getElementById('modal-hashtags');
+const modalCreator = document.getElementById('modal-creator');
 
 // ============================================
 // MODAL - CERRAR CON BOTON X
@@ -189,9 +217,21 @@ document.addEventListener('keydown', (e) => {
 // ============================================
 // MODAL - FUNCION PARA ABRIR
 // ============================================
-function openModal(imgSrc, name) {
+function openModal(imgSrc, name, tags, creator) {
     modalImage.src = imgSrc;
     modalName.textContent = name;
+    
+    // Actualizar hashtags
+    const hashtagElements = modalHashtags.querySelectorAll('.hashtag');
+    tags.forEach((tag, index) => {
+        if (hashtagElements[index]) {
+            hashtagElements[index].textContent = tag;
+        }
+    });
+    
+    // Actualizar creador
+    modalCreator.textContent = `Created by: ${creator}`;
+    
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -280,7 +320,7 @@ function renderGroupedCards(skinsToRender) {
             `;
             
             card.addEventListener('click', () => {
-                openModal(skin.imgBack, skin.name);
+                openModal(skin.imgBack, skin.name, skin.tags, skin.creator);
             });
             
             grid.appendChild(card);
