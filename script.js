@@ -212,101 +212,93 @@ if (toggle && nav) {
 // ============================================
 const skins = [
     {
-        name: 'Roman Reigns WrestleMania 42',
+        name: "Royal Rumble '26",
         wrestler: 'Roman Reigns',
-        img: 'img/RomanReigns.png',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664241902424095/3717070_20260506204103_1-Photoroom.png?ex=69fce54e&is=69fb93ce&hm=17416f324ee0f4423fb60097c85db0f4508cf978e4e156c5b005773cf4592af5&',
         imgBack: 'img/RomanReigns.png',
         tags: ['#WWE2K24', '#RomanReigns', '#WrestleMania'],
         creator: 'Nicknamed'
     },
     {
-        name: 'Roman Reigns Tribal Chief',
+        name: "Royal Rumble '26",
         wrestler: 'Roman Reigns',
-        img: 'imagen.jpg',
-        imgBack: 'imagen.jpg',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664346907082873/3717070_20260506204646_1-Photoroom.png?ex=69fce567&is=69fb93e7&hm=ec9b02ee70c076d69ce4675be469f66a0cfa17c18601b4e499e327aa3fdb1f9a&',
+        imgBack: 'img/RomanReigns.png',
+        tags: ['#WWE2K24', '#RomanReigns', '#WrestleMania'],
+        creator: 'Nicknamed'
+    },
+    {
+        name: "Wrestlemania 42",
+        wrestler: 'Roman Reigns',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664405228617858/3717070_20260506205148_1-Photoroom.png?ex=69fce575&is=69fb93f5&hm=e0a852b62fe915dc41da3c9e48f3d725e91672559c3a4fe2cdde01ae17ebb459&',
+        imgBack: 'img/RomanReigns.png',
+        tags: ['#WWE2K24', '#RomanReigns', '#WrestleMania'],
+        creator: 'Nicknamed'
+    },
+    {
+        name: "Royal Rumble '26",
+        wrestler: 'Oba Femi',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664270809698594/3717070_20260506204155_1-Photoroom.png?ex=69fce555&is=69fb93d5&hm=ad7eff65d53f466e373bcb6db7c95a1df9718c095006e50296f102908923d77d&',
+        imgBack: 'https://images-ext-1.discordapp.net/external/BEyJrW_gHkGoFCNwG8LjKK512M0K3_7adpprdX7SSug/https/i.imgur.com/Tywup0Y.jpg?format=webp&width=1633&height=919',
         tags: ['#TribalChief', '#Bloodline', '#WWE'],
         creator: 'Nicknamed'
     },
     {
-        name: 'Roman Reigns Shield',
-        wrestler: 'Roman Reigns',
-        img: 'imagen.jpg',
+        name: "March '26",
+        wrestler: 'Oba Femi',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664372844662804/3717070_20260506204724_1-Photoroom.png?ex=69fce56e&is=69fb93ee&hm=81bf3e5956b092c73336addb6120261e4bac574408ae7835d61d446d49a2cbd7&',
         imgBack: 'imagen.jpg',
         tags: ['#TheShield', '#Classic', '#Attire'],
         creator: 'Nicknamed'
     },
     {
-        name: 'Jey Uso Feb. \'26 Better Hair',
-        wrestler: 'Jey Uso',
-        img: 'imagen.jpg',
+        name: "Promo '26",
+        wrestler: 'Penta',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664437700919326/3717070_20260506205314_1-Photoroom.png?ex=69fce57d&is=69fb93fd&hm=d86e32630597ac81eae7ce36105927fc2f330e1446aefd05992d164cc93a4c4e&',
         imgBack: 'imagen.jpg',
         tags: ['#JeyUso', '#MainEvent', '#Usos'],
         creator: 'Nicknamed'
     },
     {
-        name: 'Jey Uso Promo',
+        name: "Royal Rumble '25",
+        wrestler: 'Penta',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664458521444352/3717070_20260506205608_1-Photoroom.png?ex=69fce582&is=69fb9402&hm=3964386734cccf65a9f2a5fdb50db47d4797a5c731633515a794945b3163d1b2&',
+        imgBack: 'imagen.jpg',
+        tags: ['#JeyUso', '#MainEvent', '#Usos'],
+        creator: 'Nicknamed'
+    },
+    {
+        name: "Alt. red attire",
+        wrestler: 'Penta',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664565916864512/3717070_20260506205846_1-Photoroom.png?ex=69fce59c&is=69fb941c&hm=2f7b20f912c2526857196253373c67c71e2d6cc0ec4f392e44fd15787c8484c7&',
+        imgBack: 'imagen.jpg',
+        tags: ['#JeyUso', '#MainEvent', '#Usos'],
+        creator: 'Nicknamed'
+    },
+    {
+        name: "Promo April '26",
         wrestler: 'Jey Uso',
-        img: 'imagen.jpg',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664504558256352/3717070_20260506205725_1-Photoroom.png?ex=69fce58d&is=69fb940d&hm=742cdb59fe29f98ae80ea292804724291f1a4f895c03855ee5e3c0d0be2c5ae1&',
         imgBack: 'imagen.jpg',
         tags: ['#JeyUso', '#Promo', '#WWE2K'],
         creator: 'Nicknamed'
     },
     {
-        name: 'Jey Uso Main Event',
+        name: "Feb '26",
         wrestler: 'Jey Uso',
-        img: 'imagen.jpg',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664624070758543/3717070_20260506210100_1-Photoroom.png?ex=69fce5a9&is=69fb9429&hm=2e5a8fb1a26a8175a2bf57da18775ce4533d545820823a6f9d69152554ec3267&',
         imgBack: 'imagen.jpg',
         tags: ['#MainEvent', '#YeetCity', '#Uso'],
         creator: 'Nicknamed'
     },
     {
-        name: 'AJ Styles Phenomenal',
-        wrestler: 'AJ Styles',
-        img: 'imagen.jpg',
+        name: "Promo '26",
+        wrestler: 'Jey Uso',
+        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664664348659732/3717070_20260506210423_1-Photoroom.png?ex=69fce5b3&is=69fb9433&hm=e869c14b384b1b1b6e5a64a0200c9def58c6c8687555c222953b22a1892aef4d&',
         imgBack: 'imagen.jpg',
-        tags: ['#AJStyles', '#Phenomenal', '#P1'],
+        tags: ['#MainEvent', '#YeetCity', '#Uso'],
         creator: 'Nicknamed'
-    },
-    {
-        name: 'AJ Styles TNA',
-        wrestler: 'AJ Styles',
-        img: 'imagen.jpg',
-        imgBack: 'imagen.jpg',
-        tags: ['#TNA', '#Classic', '#AJStyles'],
-        creator: 'Nicknamed'
-    },
-    {
-        name: 'John Cena Ruthless',
-        wrestler: 'John Cena',
-        img: 'imagen.jpg',
-        imgBack: 'imagen.jpg',
-        tags: ['#JohnCena', '#Ruthless', '#NeverGiveUp'],
-        creator: 'Nicknamed'
-    },
-    {
-        name: 'John Cena WrestleMania',
-        wrestler: 'John Cena',
-        img: 'imagen.jpg',
-        imgBack: 'imagen.jpg',
-        tags: ['#WrestleMania', '#Cena', '#Legend'],
-        creator: 'Nicknamed'
-    },
-    {
-        name: 'Brock Lesnar 2013',
-        wrestler: 'Brock Lesnar',
-        img: 'imagen.jpg',
-        imgBack: 'imagen.jpg',
-        tags: ['#BrockLesnar', '#Beast', '#2013'],
-        creator: 'Nicknamed'
-    },
-    {
-        name: 'Brock Lesnar Beast Mode',
-        wrestler: 'Brock Lesnar',
-        img: 'imagen.jpg',
-        imgBack: 'imagen.jpg',
-        tags: ['#BeastMode', '#Suplex', '#Lesnar'],
-        creator: 'Nicknamed'
-    },
+    }
 ];
 
 // ============================================
