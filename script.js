@@ -214,88 +214,88 @@ const skins = [
     {
         name: "Royal Rumble '26",
         wrestler: 'Roman Reigns',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664241902424095/3717070_20260506204103_1-Photoroom.png?ex=69fce54e&is=69fb93ce&hm=17416f324ee0f4423fb60097c85db0f4508cf978e4e156c5b005773cf4592af5&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970291981816008/RomanReigns_RoyalRumble2026.jpg?ex=69fe0256&is=69fcb0d6&hm=e5efae70ac3ffdee3a50bef9ec4592ddf05b9ca095d2d9f04a34bbff796b5ef6&',
+        img: 'img/RomanReigns_RoyalRumble2026.png',
+        imgBack: 'img/RomanReigns_RoyalRumble2026_back.jpg',
         tags: ['#WWE2K24', '#RomanReigns', '#WrestleMania'],
         creator: 'Nicknamed'
     },
     {
         name: "Promo April '26",
         wrestler: 'Roman Reigns',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664346907082873/3717070_20260506204646_1-Photoroom.png?ex=69fce567&is=69fb93e7&hm=ec9b02ee70c076d69ce4675be469f66a0cfa17c18601b4e499e327aa3fdb1f9a&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970271010291872/RomanReigns_PromoApril2026.jpg?ex=69fe0251&is=69fcb0d1&hm=4b6d3fccb0391e0a13076e68f8e8453074c43f33b169f27dd4e0b22778fdec17&',
+        img: 'img/RomanReigns_PromoApril2026.png',
+        imgBack: 'img/RomanReigns_PromoApril2026_back.jpg',
         tags: ['#WWE2K24', '#RomanReigns', '#WrestleMania'],
         creator: 'Nicknamed'
     },
     {
         name: "Wrestlemania 42",
         wrestler: 'Roman Reigns',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664405228617858/3717070_20260506205148_1-Photoroom.png?ex=69fce575&is=69fb93f5&hm=e0a852b62fe915dc41da3c9e48f3d725e91672559c3a4fe2cdde01ae17ebb459&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970321173905458/RomanReigns_Wrestlemania42.jpg?ex=69fe025d&is=69fcb0dd&hm=d7dfdb507e416bf926fb84206048a6a1c028140471af9773cb580d9ae8ec9c86&',
+        img: 'img/RomanReigns_Wrestlemania42.png',
+        imgBack: 'img/RomanReigns_Wrestlemania42_back.jpg',
         tags: ['#WWE2K24', '#RomanReigns', '#WrestleMania'],
         creator: 'Nicknamed'
     },
     {
         name: "Royal Rumble '26",
         wrestler: 'Oba Femi',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664270809698594/3717070_20260506204155_1-Photoroom.png?ex=69fce555&is=69fb93d5&hm=ad7eff65d53f466e373bcb6db7c95a1df9718c095006e50296f102908923d77d&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970188680298608/ObaFemi_RoyalRumble2026.jpg?ex=69fe023e&is=69fcb0be&hm=f704ab4d535f1c34635cb47c55bd4c2d423ebf13af4132e24d6a3f50974e1cbd&',
+        img: 'img/ObaFemi_RoyalRumble2026.png',
+        imgBack: 'img/ObaFemi_RoyalRumble2026_back.jpg',
         tags: ['#TribalChief', '#Bloodline', '#WWE'],
         creator: 'Nicknamed'
     },
     {
         name: "March '26",
         wrestler: 'Oba Femi',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664372844662804/3717070_20260506204724_1-Photoroom.png?ex=69fce56e&is=69fb93ee&hm=81bf3e5956b092c73336addb6120261e4bac574408ae7835d61d446d49a2cbd7&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970165972209684/ObaFemi_March2026.jpg?ex=69fe0238&is=69fcb0b8&hm=893ea7509f6b4b1518dfc7bfc5811bae2f8bdb4067a59f114dda3f79ffd03c98&',
+        img: 'img/ObaFemi_March2026.png',
+        imgBack: 'img/ObaFemi_March2026_back.jpg',
         tags: ['#TheShield', '#Classic', '#Attire'],
         creator: 'Nicknamed'
     },
     {
         name: "Promo '26",
         wrestler: 'Penta',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664437700919326/3717070_20260506205314_1-Photoroom.png?ex=69fce57d&is=69fb93fd&hm=d86e32630597ac81eae7ce36105927fc2f330e1446aefd05992d164cc93a4c4e&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970228140052571/Penta_Promo.jpg?ex=69fe0247&is=69fcb0c7&hm=29c970fcbeff9047519a442bc2bd57a178d052a80181ddc85303d229d8eba7ff&',
+        img: 'img/Penta_Promo.png',
+        imgBack: 'img/Penta_Promo_back.jpg',
         tags: ['#JeyUso', '#MainEvent', '#Usos'],
         creator: 'Nicknamed'
     },
     {
         name: "Royal Rumble '25",
         wrestler: 'Penta',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664458521444352/3717070_20260506205608_1-Photoroom.png?ex=69fce582&is=69fb9402&hm=3964386734cccf65a9f2a5fdb50db47d4797a5c731633515a794945b3163d1b2&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970248755314698/Penta_RoyalRumble2025.jpg?ex=69fe024c&is=69fcb0cc&hm=0b0ec3d1179c6f6cc215758b3cbc4d59f0af2f1bd1842d220fd0efa6b72e0309&',
+        img: 'img/Penta_RoyalRumble2025.png',
+        imgBack: 'img/Penta_RoyalRumble2025_back.jpg',
         tags: ['#JeyUso', '#MainEvent', '#Usos'],
         creator: 'Nicknamed'
     },
     {
         name: "Alt. red attire",
         wrestler: 'Penta',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664565916864512/3717070_20260506205846_1-Photoroom.png?ex=69fce59c&is=69fb941c&hm=2f7b20f912c2526857196253373c67c71e2d6cc0ec4f392e44fd15787c8484c7&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970215376785531/Penta_AltRedAttire.jpg?ex=69fe0244&is=69fcb0c4&hm=b1caf3abdeb7a0cd2ce4587903cb8b5ea5c7b1f4cd370d7dc722aa76ad2ae9c1&',
+        img: 'img/Penta_AltRedAttire.png',
+        imgBack: 'img/Penta_AltRedAttire_back.jpg',
         tags: ['#JeyUso', '#MainEvent', '#Usos'],
         creator: 'Nicknamed'
     },
     {
         name: "Promo April '26",
         wrestler: 'Jey Uso',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664504558256352/3717070_20260506205725_1-Photoroom.png?ex=69fce58d&is=69fb940d&hm=742cdb59fe29f98ae80ea292804724291f1a4f895c03855ee5e3c0d0be2c5ae1&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970130635067443/JeyUso_PromoApril2026.jpg?ex=69fe0230&is=69fcb0b0&hm=cd40af3737964524a76e5ca952310783b44377332965481204e9559f37cab622&',
+        img: 'img/JeyUso_PromoApril2026.png',
+        imgBack: 'img/JeyUso_PromoApril2026_back.jpg',
         tags: ['#JeyUso', '#Promo', '#WWE2K'],
         creator: 'Nicknamed'
     },
     {
         name: "Feb '26",
         wrestler: 'Jey Uso',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664624070758543/3717070_20260506210100_1-Photoroom.png?ex=69fce5a9&is=69fb9429&hm=2e5a8fb1a26a8175a2bf57da18775ce4533d545820823a6f9d69152554ec3267&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970068085412004/JeyUso_Feb2026.jpg?ex=69fe0221&is=69fcb0a1&hm=e8010e2c4819c6069945be3b55af806c66309d0eda2750706a0b5be2094bbf61&',
+        img: 'img/JeyUso_Feb2026.png',
+        imgBack: 'img/JeyUso_Feb2026_back.jpg',
         tags: ['#MainEvent', '#YeetCity', '#Uso'],
         creator: 'Nicknamed'
     },
     {
         name: "Promo '26",
         wrestler: 'Jey Uso',
-        img: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501664664348659732/3717070_20260506210423_1-Photoroom.png?ex=69fce5b3&is=69fb9433&hm=e869c14b384b1b1b6e5a64a0200c9def58c6c8687555c222953b22a1892aef4d&',
-        imgBack: 'https://cdn.discordapp.com/attachments/1501662259003265084/1501970104101900449/JeyUso_Promo2026.jpg?ex=69fe022a&is=69fcb0aa&hm=e73d5fdf8a76632f50c7abc776da53654afded772dffc9f9fc202e824565336c&',
+        img: 'img/JeyUso_Promo2026.png',
+        imgBack: 'img/JeyUso_Promo2026_back.jpg',
         tags: ['#MainEvent', '#YeetCity', '#Uso'],
         creator: 'Nicknamed'
     }
