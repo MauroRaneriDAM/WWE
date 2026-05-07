@@ -55,6 +55,7 @@
                 <a href="#home">Home</a>
                 <a href="#aboutme">About me</a>
                 <a href="#requests">Requests</a>
+                <a href="#feedback">Feedback</a>
                 <a href="#allmycreations">All my creations</a>
             </nav>
         </header>
@@ -106,6 +107,48 @@
                     <img src="img/DiscordLogo.png" alt="Discord" class="discord-logo-img">
                 </div>
 
+            </div>
+        </section>
+
+        <!-- ============================================
+             FEEDBACK / CONTACT FORM
+             ============================================ -->
+        <section id="feedback" class="feedback-section">
+            <div class="feedback-container hidden">
+                <h2 class="feedback-title">Leave your feedback</h2>
+                <p class="feedback-desc">Share your thoughts, suggestions or just say hello!</p>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="email-input">Your email</label>
+                        <input 
+                            type="email" 
+                            id="email-input" 
+                            name="email" 
+                            placeholder="example@email.com"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message-input">Your message</label>
+                        <textarea 
+                            id="message-input" 
+                            name="message" 
+                            placeholder="Write your message, suggestion or feedback here..."
+                            rows="5"
+                            required
+                        ></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit" id="submit-btn">
+                        <span class="btn-text">Send message</span>
+                        <span class="btn-loading">Sending...</span>
+                    </button>
+                </form>
+                
+                <div class="form-message" id="form-message"></div>
             </div>
         </section>
 

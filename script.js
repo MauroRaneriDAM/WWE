@@ -472,3 +472,77 @@ if (searchClear) {
         searchInput.focus();
     });
 }
+
+// ============================================
+// CONTACT FORM - ENVIAR MENSAJE AL BACKEND
+// ============================================
+const contactForm  = document.getElementById('contact-form');
+const submitBtn    = document.getElementById('submit-btn');
+const formMessage  = document.getElementById('form-message');
+const emailInput   = document.getElementById('email-input');
+const messageInput = document.getElementById('message-input');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Obtener valores
+        const email   = emailInput.value.trim();
+        const message = messageInput.value.trim();
+
+        // Validacion basica
+        if (!email || !message) {
+            showFormMessage('Please fill in all fields', 'error');
+            return;
+        }
+
+        // Validar formato email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showFormMessage('Please enter a valid email address', 'error');
+            return;
+        }
+
+        // Estado de carga
+        submitBtn.classList.add('loading');
+
+        try {
+            // Enviar al servidor
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, message })
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                showFormMessage('Message sent successfully! Thank you for your feedback.', 'success');
+                contactForm.reset();
+            } else {
+                showFormMessage(data.error || 'Error sending message. Please try again.', 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showFormMessage('Connection error. Please try again later.', 'error');
+        } finally {
+            submitBtn.classList.remove('loading');
+        }
+    });
+}
+
+// ============================================
+// MOSTRAR MENSAJE DEL FORMULARIO
+// ============================================
+function showFormMessage(text, type) {
+    formMessage.textContent = text;
+    formMessage.className   = 'form-message';
+    formMessage.classList.add(type);
+
+    // Ocultar despues de 5 segundos
+    setTimeout(() => {
+        formMessage.className = 'form-message';
+    }, 5000);
+}
