@@ -11,6 +11,9 @@ Antes de comenzar, asegurate de tener instalado:
 
 - **Git** - Para clonar el repositorio
 - **Node.js** - Para ejecutar el servidor (descargar en https://nodejs.org)
+- **Visual Studio Code** con la extension **Live Server** instalada - Necesaria para lanzar el proyecto correctamente (sin ella, abrir el archivo con F5 o directamente desde el explorador de archivos no funcionara)
+
+> **Como instalar Live Server:** Abre VS Code → Ve a la pestaña de Extensiones (icono de cuadrados en la barra lateral izquierda o `Ctrl+Shift+X`) → Busca "Live Server" → Instala la extension de Ritwick Dey.
 
 ### Pasos para Ejecutar el Proyecto
 
@@ -37,9 +40,11 @@ node server.js
 
 ```plaintext
 
-**4. Abrir en el navegador**
+**4. Abrir en el navegador con Live Server**
 
-Accede a la siguiente direccion:
+Con el proyecto abierto en VS Code, haz clic en el boton **"Go Live"** que aparece en la barra de estado inferior, normalmente en la esquina inferior derecha de la ventana. Esto abrira automaticamente el proyecto en el navegador.
+
+Tambien puedes acceder manualmente a la siguiente direccion:
 ```
 
 [http://localhost:5500](http://localhost:5500)
@@ -336,3 +341,4 @@ La pagina se adapta a distintos tamanos de pantalla mediante media queries CSS.
 - JavaScript (ES6+)
 - Node.js
 - JSON
+```
